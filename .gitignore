@@ -1,0 +1,14 @@
+# KiCad local history, backups, locks and caches
+**/.history/
+**/*-backups/
+*.lck
+~*.lck
+_autosave-*
+*.kicad_prl
+fp-info-cache
+**/_avg_/
+
+# Freerouting intermediate files
+*.dsn
+*.ses
+freerouting*.json

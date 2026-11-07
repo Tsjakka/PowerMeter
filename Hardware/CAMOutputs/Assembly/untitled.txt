@@ -1,0 +1,9 @@
+Partlist exported from C:/Users/Robin/Documents/EAGLE/projects/PwMon Bob/untitled.sch at 11/06/2022 22:35
+
+Qty Value Device       Package Parts                   Description                                      MF                 MPN      OC_FARNELL OC_NEWARK POPULARITY SPICEPREFIX
+2         FE10-1       FE10    ADS1, ADS1115           FEMALE HEADER                                                                unknown    unknown   4                     
+6         R-EU_0207/10 0207/10 R5, R6, R7, R8, R9, R10 RESISTOR, European symbol                                                                         81         R          
+5         W237-4       W237-4  X1, X2, X3, X4, X5      WAGO SCREW CLAMP                                                             unknown    unknown   10                    
+3   100K  R-EU_0207/10 0207/10 R2, R3, R4              RESISTOR, European symbol                                                                         81         R          
+1   10K   R-EU_0207/10 0207/10 R1                      RESISTOR, European symbol                                                                         81         R          
+4   LM358 AD826N       DIL08   IC1, IC2, IC3, IC4      High-Speed, Low-Power Dual Operational Amplifier ALTERA CORPORATION AD826ANZ 1438583    59K6530   0                     

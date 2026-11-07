@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "PowerMeter")(type "KiCad")(uri "${KIPRJMOD}/PowerMeter.kicad_sym")(options "")(descr "PowerMeter project symbols"))
+)
