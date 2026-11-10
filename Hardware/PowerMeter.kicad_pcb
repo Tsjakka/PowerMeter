@@ -31913,7 +31913,7 @@
 		)
 	)
 	(gr_text "WARNING: switch OFF the circuit breaker before connecting or disconnecting a CT"
-		(at 120 113.9 0)
+		(at 118 111.5 0)
 		(layer "F.SilkS")
 		(uuid "5401398c-4ed0-4f21-b7c1-4ffca05bee91")
 		(effects
@@ -31924,7 +31924,7 @@
 		)
 	)
 	(gr_text "Mount all CTs the same way round (same side towards the breaker), red wire in the LEFT terminal"
-		(at 120 115.4 0)
+		(at 118 114.5 0)
 		(layer "F.SilkS")
 		(uuid "e39b98e5-2855-40ed-9290-aa721769b2c9")
 		(effects
@@ -31960,17 +31960,6 @@
 		(at 95.44 117 0)
 		(layer "F.SilkS")
 		(uuid "6ed00da4-0042-470e-b101-9c130a1bed41")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.18)
-			)
-		)
-	)
-	(gr_text "PowerMeter v2  2026-11"
-		(at 96 51.8 0)
-		(layer "F.SilkS")
-		(uuid "f1d96724-3c96-4b9c-85c7-ff60e0965c26")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -32026,6 +32015,17 @@
 		(at 151.94 117 0)
 		(layer "F.SilkS")
 		(uuid "59c7d6a3-e138-450d-8cfd-3fa809112b64")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.18)
+			)
+		)
+	)
+	(gr_text "PowerMeter v2  2026-11"
+		(at 172 72.5 0)
+		(layer "F.SilkS")
+		(uuid "f1d96724-3c96-4b9c-85c7-ff60e0965c26")
 		(effects
 			(font
 				(size 1.2 1.2)
