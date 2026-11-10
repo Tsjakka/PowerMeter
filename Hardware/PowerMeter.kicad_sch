@@ -4534,6 +4534,197 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Bridged"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Bridged*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_0_1"
+				(rectangle
+					(start -0.508 0.508)
+					(end 0.508 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.016)
+						(xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016)
+						(xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "VOEDING  (5 V via USB-kabel op J10)"
 		(exclude_from_sim no)
@@ -9940,7 +10131,7 @@
 				)
 			)
 		)
-		(property "Value" "7V AC"
+		(property "Value" "7V AC L1"
 			(at 364.49 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10117,7 +10308,7 @@
 				)
 			)
 		)
-		(property "Value" "7V AC (jack)"
+		(property "Value" "7V AC L1 (jack)"
 			(at 359.41 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20366,7 +20557,7 @@
 		)
 		(uuid "ed1c9676-ea97-44e7-bd70-8335973dff9b")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE2_P"
 		(at 252.73 182.88 180)
 		(effects
 			(font
@@ -20376,7 +20567,7 @@
 		)
 		(uuid "bd1e20f9-c0a6-4641-bec5-4b6f841e084d")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE2_N"
 		(at 252.73 185.42 180)
 		(effects
 			(font
@@ -20386,7 +20577,7 @@
 		)
 		(uuid "da975da3-961d-45d8-8b87-041c41e3ce5f")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE2_P"
 		(at 252.73 187.96 180)
 		(effects
 			(font
@@ -20396,7 +20587,7 @@
 		)
 		(uuid "1ccb7221-ac39-4739-a387-17cf3efe4eb4")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE2_N"
 		(at 252.73 190.5 180)
 		(effects
 			(font
@@ -20406,7 +20597,7 @@
 		)
 		(uuid "48d47b96-6f64-4c9b-83f2-e1993552c1f0")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE2_P"
 		(at 252.73 193.04 180)
 		(effects
 			(font
@@ -20416,7 +20607,7 @@
 		)
 		(uuid "2b69d104-5e52-4ba2-a84d-5d3484845d6a")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE2_N"
 		(at 252.73 195.58 180)
 		(effects
 			(font
@@ -27801,7 +27992,7 @@
 		)
 		(uuid "f7a10602-3faf-4545-95ed-93bf893c38f2")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE3_P"
 		(at 440.69 182.88 180)
 		(effects
 			(font
@@ -27811,7 +28002,7 @@
 		)
 		(uuid "0c62a4c8-b8da-4103-9474-5b5c44e6c8c4")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE3_N"
 		(at 440.69 185.42 180)
 		(effects
 			(font
@@ -27821,7 +28012,7 @@
 		)
 		(uuid "9d652ed5-373c-4de6-bdca-41dfcdb3111d")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE3_P"
 		(at 440.69 187.96 180)
 		(effects
 			(font
@@ -27831,7 +28022,7 @@
 		)
 		(uuid "b72106cf-504d-44c8-bdeb-d7e9b0ec784d")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE3_N"
 		(at 440.69 190.5 180)
 		(effects
 			(font
@@ -27841,7 +28032,7 @@
 		)
 		(uuid "6da0e610-c8c9-4587-84be-5c4aee223b4e")
 	)
-	(label "VSENSE_P"
+	(label "VSENSE3_P"
 		(at 440.69 193.04 180)
 		(effects
 			(font
@@ -27851,7 +28042,7 @@
 		)
 		(uuid "d03bb426-e1db-4c7c-baf3-30bceb6110b1")
 	)
-	(label "VSENSE_N"
+	(label "VSENSE3_N"
 		(at 440.69 195.58 180)
 		(effects
 			(font
@@ -34803,6 +34994,2228 @@
 			(justify left bottom)
 		)
 		(uuid "9ac92a05-1d8e-4aee-968b-8aa24c547e35")
+	)
+	(text "SPANNING L2 en L3  (eigen ingang per meetchip)"
+		(exclude_from_sim no)
+		(at 350 89.5 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "bdc08ffe-844a-4510-a084-6e3a3cec00d6")
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 356.87 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "66b86d80-758a-4405-930e-e09ea5d733c9")
+		(property "Reference" "J15"
+			(at 356.87 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "7V AC L2"
+			(at 356.87 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 356.87 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 356.87 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 356.87 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 356.87 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7e9676e-3810-4a21-9d7e-dd0af9aaa506")
+		)
+		(pin "2"
+			(uuid "474404ca-c5ce-43f3-adb9-e56fba6e51dd")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC2"
+		(at 351.79 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4f6eb9c2-4512-4166-9be9-d6596e3bc3d3")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 351.79 100.33 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7c82df38-f64b-4d5c-8d77-c0e2f2d03960")
+		(property "Reference" "#PWR157"
+			(at 345.44 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 347.98 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 351.79 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 351.79 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 351.79 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2dc323f1-8a9b-4a05-934d-aa1b2a5d9f54")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR157")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 369.57 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "50303447-2147-4452-a3f7-cc5130618c8d")
+		(property "Reference" "JP1"
+			(at 369.57 89.408 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1-fase"
+			(at 369.57 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+			(at 369.57 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 369.57 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 369.57 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9262b30-5145-47e6-beb4-4b0344453850")
+		)
+		(pin "2"
+			(uuid "bf4ad3c1-f7c5-43d2-afca-e9dfd0269f46")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC"
+		(at 364.49 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "05841b39-80bf-46e3-b9fd-95cef9e4bd68")
+	)
+	(label "VAC2"
+		(at 374.65 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "048234d6-573c-4244-966f-847c772a60b1")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 379.73 96.52 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21c29df6-e915-42c1-b22b-ab34d5992804")
+		(property "Reference" "R56"
+			(at 379.73 93.98 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22k 1%"
+			(at 379.73 99.06 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 379.73 98.298 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 379.73 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 379.73 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17560"
+			(at 379.73 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "590ebd13-f18f-4810-874d-be01f8434b49")
+		)
+		(pin "2"
+			(uuid "6fb375fd-b289-46b7-84b4-88f9ed51235e")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC2"
+		(at 375.92 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ef9fdb65-679c-41b2-9305-98a15e81b653")
+	)
+	(label "VSENSE2_P"
+		(at 383.54 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b3041220-8c53-4486-bce3-d9d6084e6ffd")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 389.89 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f2ef0753-6ba8-4147-a699-46176777b614")
+		(property "Reference" "R57"
+			(at 391.922 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k 1%"
+			(at 389.89 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 388.112 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 389.89 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 389.89 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 389.89 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b8e58e94-1e3e-4b11-b0d7-2414c0d11b04")
+		)
+		(pin "2"
+			(uuid "22c6c561-7d9c-4eec-9130-f656dc6c17c0")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE2_P"
+		(at 389.89 100.33 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c1052d1-6ec2-4413-8b79-c0fae6c7c0dc")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 389.89 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "72076a96-ac96-4d21-9637-9853fcee00ad")
+		(property "Reference" "#PWR158"
+			(at 389.89 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 389.89 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 389.89 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 389.89 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 389.89 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4556b96d-df09-4d0b-bc1a-a09564431608")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR158")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 396.24 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f21dba19-64ee-437b-a4fb-87e646b2c480")
+		(property "Reference" "C48"
+			(at 396.875 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33n C0G"
+			(at 396.875 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 397.205 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 396.24 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 396.24 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1518212"
+			(at 396.24 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1dc0e6d-0a76-42ec-a5b7-c49d72835ae7")
+		)
+		(pin "2"
+			(uuid "ba80afb4-050a-40be-b357-febcd4cdfb38")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "C48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE2_P"
+		(at 396.24 100.33 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "826a2cca-5f9a-4f85-ac6b-a421165027a8")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 396.24 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "e8201883-fed9-4d83-8205-747eaf981ffc")
+		(property "Reference" "#PWR159"
+			(at 396.24 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 396.24 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 396.24 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 396.24 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 396.24 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48a225ba-8c92-4a45-967c-a5fb86bf3a80")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR159")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 389.89 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a94699b-5587-42f5-9d13-74b0269cb622")
+		(property "Reference" "R58"
+			(at 391.922 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k 1%"
+			(at 389.89 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 388.112 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 389.89 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 389.89 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 389.89 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "080c69a7-dd4a-4a36-9564-f507fa5db671")
+		)
+		(pin "2"
+			(uuid "6bda56d3-23ac-4149-a072-f7315a0da170")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE2_N"
+		(at 389.89 114.3 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69006c99-4687-4d55-84ad-2854abc69f76")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 389.89 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "e7d65355-dd83-4724-9e30-d8ef388a7ab2")
+		(property "Reference" "#PWR160"
+			(at 389.89 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 389.89 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 389.89 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 389.89 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 389.89 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "13714bd6-24ee-4086-8b4f-0c7db0065a33")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 396.24 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4cea2c7f-90c6-448e-86f7-82e9bd6d5962")
+		(property "Reference" "C49"
+			(at 396.875 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33n C0G"
+			(at 396.875 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 397.205 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 396.24 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 396.24 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1518212"
+			(at 396.24 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "394136e6-23c5-407d-8a5e-8c01f31f11e8")
+		)
+		(pin "2"
+			(uuid "475e7370-0bff-4619-bf37-f63fc6a8b547")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "C49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE2_N"
+		(at 396.24 114.3 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93b071ce-2959-4761-ac89-e61a99e7fa97")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 396.24 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "e4fcb365-27ef-48c4-84e5-9cbb268d9a06")
+		(property "Reference" "#PWR161"
+			(at 396.24 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 396.24 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 396.24 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 396.24 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 396.24 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8a2cbea1-60f0-4ac4-b18a-737cea2c713c")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "L2 -> U3 (CT4-6). JP1 dicht = eenfase (alle chips op L1)"
+		(exclude_from_sim no)
+		(at 350 125 0)
+		(effects
+			(font
+				(size 1.3 1.3)
+			)
+			(justify left bottom)
+		)
+		(uuid "83d1e30b-f559-484e-883d-2d6c906362a6")
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 415.29 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e42189b6-0e6d-4e7c-a8f8-ecb4fa8c332d")
+		(property "Reference" "J16"
+			(at 415.29 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "7V AC L3"
+			(at 415.29 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 415.29 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 415.29 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 415.29 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 415.29 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dfcd8440-42b9-478a-8cca-ac1b4331ddee")
+		)
+		(pin "2"
+			(uuid "e1279a8f-8372-4d37-9fe5-a6699d37ffca")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC3"
+		(at 410.21 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "684da72a-2b6e-44c7-8dc5-21cc2fb635d8")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 410.21 100.33 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "cf9718cd-965b-4ad1-9ad2-91d6757e20f6")
+		(property "Reference" "#PWR162"
+			(at 403.86 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 406.4 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 410.21 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 410.21 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 410.21 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bc6ccfb-d2b0-43fc-b5d5-c2eadf1ae104")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 427.99 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "01469c5e-e8e4-44a1-a79a-8ccde9ef8b71")
+		(property "Reference" "JP2"
+			(at 427.99 89.408 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1-fase"
+			(at 427.99 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+			(at 427.99 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 427.99 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 427.99 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2e718d58-ae44-49ee-9d78-eebd72090154")
+		)
+		(pin "2"
+			(uuid "133671e2-b3c3-4980-a383-882b74fadd6b")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC"
+		(at 422.91 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "40e49f83-c633-4003-b618-c3fb6bd08736")
+	)
+	(label "VAC3"
+		(at 433.07 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7fb90902-d9b4-4f3c-884d-fdb8c90e3a35")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 438.15 96.52 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7d5308ce-af93-4045-adfe-722c99657a4f")
+		(property "Reference" "R59"
+			(at 438.15 93.98 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22k 1%"
+			(at 438.15 99.06 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 438.15 98.298 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 438.15 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 438.15 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17560"
+			(at 438.15 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1d7327e-9fda-4ac0-957f-af19378db623")
+		)
+		(pin "2"
+			(uuid "735a7943-b89b-405a-bb62-309ebdce9274")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VAC3"
+		(at 434.34 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5cc29cc2-775e-4204-b11f-0353fb26c929")
+	)
+	(label "VSENSE3_P"
+		(at 441.96 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a5a61c6-e745-41f2-9937-7179f2e1a94b")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 448.31 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "512ccee3-1e6e-4bc5-83b6-a1540a66051c")
+		(property "Reference" "R60"
+			(at 450.342 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k 1%"
+			(at 448.31 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 446.532 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 448.31 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 448.31 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 448.31 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "68bab960-29c3-4c1c-85db-31e9f867bff2")
+		)
+		(pin "2"
+			(uuid "380764cf-eca1-41f8-a242-f9e8afff851e")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE3_P"
+		(at 448.31 100.33 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "73481d9f-a8fd-4cc4-bc19-731548dbb4df")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 448.31 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "606cbb7b-b508-4f94-8b86-0c4f369cc7a0")
+		(property "Reference" "#PWR163"
+			(at 448.31 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 448.31 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 448.31 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 448.31 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 448.31 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a5987fc-551e-4451-bfc8-ecba30d9ce4b")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR163")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 453.39 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "966b4ac0-4a7a-4bb8-b621-1fcbf16b90b9")
+		(property "Reference" "C50"
+			(at 454.025 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33n C0G"
+			(at 454.025 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 454.355 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 453.39 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 453.39 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1518212"
+			(at 453.39 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca409d07-6e34-4fdd-afab-d594b18e3481")
+		)
+		(pin "2"
+			(uuid "15f8a910-9901-4f1c-9c22-0f5d38dda45a")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "C50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE3_P"
+		(at 453.39 100.33 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78fa17e1-cd17-4688-82c9-1d7e12bf59da")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 453.39 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7ca6fb54-e3a6-4372-958a-ce1063575a1e")
+		(property "Reference" "#PWR164"
+			(at 453.39 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 453.39 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 453.39 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 453.39 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 453.39 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1dab72d3-974d-43fe-bb6a-9856e5938b44")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR164")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 448.31 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8461ae54-551e-43fa-9377-51735a63afd2")
+		(property "Reference" "R61"
+			(at 450.342 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k 1%"
+			(at 448.31 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 446.532 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 448.31 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 448.31 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 448.31 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e662e9e-90b8-4e5c-890e-3e930e823bd7")
+		)
+		(pin "2"
+			(uuid "90920ab3-883c-4362-9eb5-12dfef1b9013")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "R61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE3_N"
+		(at 448.31 114.3 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e32f4785-67db-42ee-830c-c8c15acbeda5")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 448.31 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "c74acd63-7297-4ced-9e20-0f8c02121b16")
+		(property "Reference" "#PWR165"
+			(at 448.31 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 448.31 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 448.31 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 448.31 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 448.31 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32d36189-fbd0-4186-b682-e031081505d7")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 453.39 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dedc2384-1a7e-46e3-9e54-26526fd195fb")
+		(property "Reference" "C51"
+			(at 454.025 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33n C0G"
+			(at 454.025 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 454.355 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 453.39 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 453.39 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1518212"
+			(at 453.39 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3b68d84-c916-43b7-9b99-1e3ed3fde5ac")
+		)
+		(pin "2"
+			(uuid "1809d47f-7b1e-453f-b015-d782c3761942")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "C51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSENSE3_N"
+		(at 453.39 114.3 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d51a2077-7398-4aac-b431-edfc2091f011")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 453.39 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "07c71ce1-3b30-4a75-be0d-408e649ea7fa")
+		(property "Reference" "#PWR166"
+			(at 453.39 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 453.39 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 453.39 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 453.39 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 453.39 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a0fb103-d70a-4ded-b76b-91dad65fc7aa")
+		)
+		(instances
+			(project "PowerMeter"
+				(path "/98d9ea24-443b-4635-8cb4-ee9c872e0a67"
+					(reference "#PWR166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "L3 -> U5 (CT7-9). JP2 dicht = eenfase (alle chips op L1)"
+		(exclude_from_sim no)
+		(at 408 125 0)
+		(effects
+			(font
+				(size 1.3 1.3)
+			)
+			(justify left bottom)
+		)
+		(uuid "5811878a-038e-4722-b719-c7c74b939d7d")
 	)
 	(sheet_instances
 		(path "/"

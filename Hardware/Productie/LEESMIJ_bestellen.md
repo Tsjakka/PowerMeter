@@ -1,6 +1,6 @@
 # Bestellen bij JLCPCB: PowerMeter v2
 
-Gemaakt op 7 november 2026 uit `PowerMeter.kicad_pcb`.
+Gemaakt op 10 november 2026 uit `PowerMeter.kicad_pcb` (versie met een eigen spanningsingang per meetchip, voorbereid op driefase).
 Stand bij export:
 - DRC: 0 onverbonden, 0 elektrische fouten, 0 fouten in de koppeling met het schema.
 - ERC: 0 fouten.
@@ -10,7 +10,7 @@ Stand bij export:
 | Bestand | Upload bij JLCPCB als |
 |---|---|
 | `PowerMeter_v2_Gerbers.zip` | **Gerber-bestand** (koper, soldeermasker, pasta en silkscreen voor- en achterkant, omtrek, boorbestanden PTH + NPTH) |
-| `JLCPCB_BOM.csv` | **BOM** bij PCB Assembly (18 regels, 122 SMD-onderdelen) |
+| `JLCPCB_BOM.csv` | **BOM** bij PCB Assembly (18 regels, 132 SMD-onderdelen) |
 | `JLCPCB_CPL.csv` | **CPL / pick-and-place** bij PCB Assembly |
 | `Gerbers/` | dezelfde bestanden los, om te bekijken in een Gerber-viewer |
 
@@ -42,6 +42,8 @@ Stand bij export:
 
 Niet bestukt (DNP): R7 en R8 (I²C pull-ups, alleen nodig als je OLED-module ze zelf niet heeft).
 
+JP1 en JP2 zijn soldeerjumpers die in koper al gesloten zijn (eenfase); daar wordt niets op geplaatst. Voor driefase snij je ze later zelf door.
+
 ## LCSC-onderdelen (gecontroleerd op lcsc.com, 7 november 2026)
 
 | LCSC | Onderdeel |
@@ -49,7 +51,7 @@ Niet bestukt (DNP): R7 en R8 (I²C pull-ups, alleen nodig als je OLED-module ze 
 | C177153 | ATM90E32AS-AU-R (3×) |
 | C51118 | AP2112K-3.3TRG1 |
 | C13739 | Kristal 16,384 MHz 3225, 20 pF, ±10 ppm (YXC X322516384MSB4SI) |
-| C1518212 | 33 nF C0G 50 V 0805 (Murata GRM2165C1H333JA01D) (20×) |
+| C1518212 | 33 nF C0G 50 V 0805 (Murata GRM2165C1H333JA01D) (24×) |
 | C140894 | SMAJ5.0CA bidirectionele TVS (LRC) (9×) |
 | C2480 | SS14 |
 | C1017 | Ferriet 600 Ω@100 MHz 0805 |
@@ -65,7 +67,7 @@ Niet bestukt (DNP): R7 en R8 (I²C pull-ups, alleen nodig als je OLED-module ze 
 
 | Aantal | Onderdeel | Refs |
 |---|---|---|
-| 11 | Schroefklem 2-polig 5,08 mm, horizontaal (Phoenix MKDS 1,5/2-5,08 of een kloon) | J1–J9 (CT), J10 (5 V), J14 (7 V AC) |
+| 13 | Schroefklem 2-polig 5,08 mm, horizontaal (Phoenix MKDS 1,5/2-5,08 of een kloon) | J1–J9 (CT), J10 (5 V), J14 (7 V AC L1), J15 (L2), J16 (L3) |
 | 1 | DC-barreljack 5,5/2,1 mm (optioneel, parallel aan J14) | J13 |
 | 2 | Female header 1×8, 2,54 mm (voor de SuperMini) | U1 |
 | 1 | Pin header 1×4, 2,54 mm | J11 (OLED) |

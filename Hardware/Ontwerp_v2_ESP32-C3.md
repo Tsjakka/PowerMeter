@@ -7,6 +7,7 @@ Ontwerp van november 2026. Het vervangt het ontwerp met RPi, ADS1115 en LM358.
 **Uitgangspunten** (afgestemd op 6 november 2026):
 
 - **7 groepen**, éénfase. Op één groep zit de **omvormer van de zonnepanelen**.
+  - Sinds 10 november 2026 is het bord ook voorbereid op **driefase**: elke chip heeft een eigen spanningsingang (zie 4.5).
 - ESP32-C3 **SuperMini**, gevoed met een **USB-lader**.
 - Een **webpagina op de ESP** zelf, zonder Home Assistant. Daarnaast een **OLED-scherm** (SSD1306 128×64, I²C) en **één drukknop**.
 - **Schroefklemmen**, met de burden op het bord. **Alle draden komen van onderen.**
@@ -181,24 +182,42 @@ Gebruik voor de SPI 200 kHz – 1 MHz. Het maximum van de chip is ~2 MHz.
 **De reservekanalen CT8 en CT9** worden gewoon volledig bestukt. Je kunt ze later gebruiken voor een extra groep.
 Wil je ooit de **hoofdkabel** meten (bijv. 1×35 A of 1×40 A), dan heb je een split-core CT nodig die om de dikkere kabel past. Bij een verhouding van 2000:1 vervang je de burden op dat kanaal door 2 × 15 Ω, en dan reikt het bereik tot ~48 A.
 
-### 4.5 Spanningsingang (één keer)
+### 4.5 Spanningsingang: één per meetchip (voorbereid op driefase)
+
+Sinds 10 november 2026 heeft elke meetchip een eigen spanningsingang met een eigen deler. Daardoor meet elke chip één fase:
+
+| Fase | Ingang | Deler | Chip | CT's |
+|---|---|---|---|---|
+| L1 | J14 (+ DC-jack J13), linkerrand | R11/R12/C7, R13/C8 | U2 | CT1–CT3 |
+| L2 | J15, rechterrand | R56/R57/C48, R58/C49 | U3 | CT4–CT6 |
+| L3 | J16, rechterrand | R59/R60/C50, R61/C51 | U5 | CT7–CT9 |
 
 ```
- 7V AC-adapter
-   ader 1 ── J14.1 ─ Rd1 22k ──┬──────────── VSENSE_P → V1P/V2P/V3P van U2, U3, U5
-                               │       │
-                             Rd2 1k  Cv 33nF C0G
-                               │       │
-   ader 2 ── J14.2 ─ GND ──────┴───────┴── GND
+ 7V AC-adapter Lx
+   ader 1 ── J.1 (VACx) ─ Rd1 22k ──┬──────────── VSENSEx_P → V1P/V2P/V3P van de eigen chip
+                                    │       │
+                                  Rd2 1k  Cv 33nF C0G
+                                    │       │
+   ader 2 ── J.2 ─ GND ─────────────┴───────┴── GND
 
-   VSENSE_N → V1N/V2N/V3N van U2, U3, U5 ── Rn 1k ── GND,  Cn 33nF C0G naar GND
+   VSENSEx_N → V1N/V2N/V3N van de eigen chip ── Rn 1k ── GND,  Cn 33nF C0G naar GND
 ```
 
+- **Eénfase (standaard):** de soldeerjumpers **JP1** (VAC ↔ VAC2) en **JP2** (VAC ↔ VAC3) zijn op de print **gesloten**. Eén adapter op J14 voedt dan alle drie de delers, en J15/J16 blijven leeg.
+- **Driefase:**
+  - Snijd het koperbruggetje in JP1 en JP2 door met een scherp mesje, en meet met een multimeter na dat ze open zijn.
+  - Sluit drie 7 V AC-adapters aan, elk in een stopcontact op een andere fase: L1 op J14, L2 op J15, L3 op J16. De uitgangen zijn galvanisch gescheiden, dus de gemeenschappelijke GND is geen probleem.
+  - Wil je later terug naar eenfase, soldeer de jumpers dan weer dicht.
+- **Capaciteit in driefase:** maximaal **3 groepen per fase** (CT1–3 op L1, CT4–6 op L2, CT7–9 op L3), samen 9. Een groep die zelf meerfasig is (bijv. een kookplaat op 2 fasen of een warmtepomp op 3 fasen) gebruikt één CT per fase.
 - **Deler 1/23.** Een 7 V-adapter geeft ~8,5–10,5 V, en dat wordt maximaal ~460 mVrms op de ingang. Dat past ruim binnen 720 mVrms.
-- **Belasting door de chips:** 9 V-ingangen van 120 kΩ parallel is 13,3 kΩ. Dat geeft ~7 % lagere amplitude, en die kalibreer je weg.
-  Het faseverschil met de stroomkanalen is 0,08° bij 50 Hz, en dat is verwaarloosbaar.
-- **Zet op VSENSE_P geen extra serieweerstand.**
-- **J14 + J13:** een 2-polige schroefklem (J14) met parallel een DC-barreljack 5,5/2,1 mm (J13). Gebruik wat bij je adapter past.
+- **Belasting door de chip:** 3 V-ingangen van 120 kΩ parallel is 40 kΩ. Dat geeft ~2 % lagere amplitude, en die kalibreer je weg (per chip `gain_voltage`).
+  Het faseverschil met de stroomkanalen blijft onder 0,1° bij 50 Hz.
+- **Zet op VSENSEx_P geen extra serieweerstand.**
+- **Layout:**
+  - De delers voor L2 en L3 zitten tussen de chips (bij U3 tussen U2 en U3, bij U5 tussen U3 en U5), zo kort mogelijk bij hun chip.
+  - Hun verbinding met de chip loopt als twee vergrendelde sporen over de onderlaag, door dezelfde strook waar eerder de gedeelde VSENSE-sporen liepen.
+  - De 7 V AC-lijnen (VAC, VAC2, VAC3) hebben een lage impedantie en mogen langer zijn. Die routeert Freerouting.
+- **J14 + J13:** een 2-polige schroefklem (J14) met parallel een DC-barreljack 5,5/2,1 mm (J13), allebei voor L1. Gebruik wat bij je adapter past.
 
 ### 4.6 OLED en knop
 
@@ -274,7 +293,7 @@ De maten komen uit de tekening van de bodem van de Z74. Coördinaten zijn gemete
 
 ## 7. Bestellen bij JLCPCB
 
-> **De bestelbestanden staan klaar in `Productie/`** (7 november 2026): `PowerMeter_v2_Gerbers.zip`, `JLCPCB_BOM.csv` en `JLCPCB_CPL.csv`. De instellingen en controlepunten staan in `Productie/LEESMIJ_bestellen.md`. Alle SMD-onderdelen hebben nu een gecontroleerd LCSC-nummer, ook in het schema en de print.
+> **De bestelbestanden staan klaar in `Productie/`** (bijgewerkt 10 november 2026, met de driefase-voorbereiding): `PowerMeter_v2_Gerbers.zip`, `JLCPCB_BOM.csv` en `JLCPCB_CPL.csv`. De instellingen en controlepunten staan in `Productie/LEESMIJ_bestellen.md`. Alle SMD-onderdelen hebben nu een gecontroleerd LCSC-nummer, ook in het schema en de print.
 
 - **Wie wat doet:** JLCPCB plaatst alle SMD-onderdelen. Jij soldeert de schroefklemmen, de DC-jack, de headers en de female headers voor de SuperMini.
 - **Bestanden:** Gerbers, een BOM en een CPL uit KiCad. Elk onderdeel krijgt een veld `LCSC`.
@@ -374,7 +393,8 @@ De maten komen uit de tekening van de bodem van de Z74. Coördinaten zijn gemete
   - J2–J8 = CT2–CT8 tussen de twee onderste montagegaten;
   - J9 = CT9 rechts van het rechter gat.
   - CT1 en CT9 staan symmetrisch (allebei ~8 mm van de zijkant).
-- **Linkerrand** (draadopening naar links): J10 = 5 V, J14 = 7 V AC, J13 = DC-jack.
+- **Linkerrand** (draadopening naar links): J10 = 5 V, J14 = 7 V AC (L1), J13 = DC-jack (L1).
+- **Rechterrand** (draadopening naar rechts): J15 = 7 V AC (L2), J16 = 7 V AC (L3), met daarnaast de soldeerjumpers JP1/JP2 ("closed = single phase").
   - De jack zit ~5 mm boven het CT1-paar.
   - De binnenkant van de doos laat ~12 mm vrij naast de print. Gebruik voor de jack dus een haakse plug, of sluit de adapter via J14 aan.
 - **Silkscreen (Engels):**
@@ -421,6 +441,8 @@ Daarom zijn de kritieke sporen nu met een script gelegd en **vergrendeld** (lock
   - In een eerdere versie liepen ze boven en onder die vias. Daardoor sneden ze een strook uit het GND-vlak, en hingen enkele GND-pinnen los.
 
 DRC na deze stap: 0 clearance-fouten, 0 fouten in de koppeling met het schema, alle CT- en GND-netten volledig verbonden. Zie `PowerMeter_v2_PCB_koper.png`.
+
+**Stand na de driefase-aanpassing (10 november 2026):** de gedeelde VSENSE-sporen zijn vervangen door een aparte, vergrendelde verbinding per chip, en J15/J16, JP1/JP2 en twee extra delers zijn toegevoegd. DRC: 0 elektrische fouten, 0 fouten in de koppeling met het schema; daarna heeft Freerouting VAC, VAC2 en VAC3 gerouteerd. Eindstand: **0 onverbonden, 0 elektrische fouten, 0 fouten in de koppeling met het schema**; zes vias van 0,6/0,4 zijn naar 0,6/0,3 mm gezet.
 
 **Stand na Freerouting (7 november 2026):** alle netten zijn gerouteerd.
 - Daarna nog toegevoegd: een GND-via bij GND-pin 2 van de SuperMini, 3 GND-vias in losse eilandjes van het GND-vlak op de bovenlaag, en bij twee vias het gat verkleind van 0,4 naar 0,3 mm (anders was de koperring te smal).
